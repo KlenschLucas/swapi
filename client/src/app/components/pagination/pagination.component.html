@@ -1,0 +1,18 @@
+<div style="margin-top: 1rem">
+  <button role="button" class="btn-dark btn"
+          [class.disabled]="!hasPreviousPage"
+          (click)="changePage( currentPage - 1)"
+          style="margin: auto;"
+  >
+    <i class="fas fa-angle-double-left"></i>
+    Previous
+  </button>
+  <span class="lead">
+  Page: {{currentPage}}
+</span>
+  <button role="button" class="btn" [class.disabled]="!hasNextPage" (click)="changePage( currentPage + 1)">
+    Next Page
+    <i class="fas fa-angle-double-right"></i>
+  </button>
+
+</div>

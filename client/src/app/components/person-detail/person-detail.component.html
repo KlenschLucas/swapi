@@ -1,0 +1,24 @@
+<div class="col-sm-4 offset-4" *ngIf="person">
+  <div class="card shadow-5-strong">
+    <div class="card-body">
+      <h5 class="card-title">{{person.name}}</h5>
+      <p class="card-text">Homeworld <a href="{{person.homeworld}}" target="_blank">{{person.homeworld}}</a></p>
+      <div class="row">
+        <div class="col text-center">
+          <i class="fas fa-mars fa-xl" *ngIf="person.gender === 'male'"></i>
+          <i class="fas fa-venus fa-xl" *ngIf="person.gender === 'female'"></i>
+          <i class="fas fa-genderless fa-xl" *ngIf="person.gender === 'n/a'"></i>
+          <p>{{person.gender}}</p>
+        </div>
+        <div class="col text-center">
+          <i class="fas fa-birthday-cake fa-xl"></i>
+          <p>{{person.birthYear}}</p>
+        </div>
+        <div class="col text-center">
+          <i class="fas fa-weight fa-xl"></i>
+          <p>{{person.mass}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

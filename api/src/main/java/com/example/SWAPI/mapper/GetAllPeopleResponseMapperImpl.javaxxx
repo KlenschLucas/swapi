@@ -1,0 +1,44 @@
+//package com.example.SWAPI.mapper;
+//
+//import com.example.SWAPI.persistence.dto.GetAllPeopleResponse;
+//import com.example.SWAPI.persistence.dto.PersonResponse;
+//import com.example.SWAPI.persistence.dto.Result;
+//import com.example.SWAPI.persistence.dto.SwApiPeopleResponse;
+//import org.mapstruct.Mapper;
+//
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.List;
+//
+//public class GetAllPeopleResponseMapperImpl implements GetAllPeopleResponseMapper {
+//
+//    @Override
+//    GetAllPeopleResponse swApiPeopleResponseToGetAllPeopleResponse(SwApiPeopleResponse swApiPeopleResponse) {
+//
+//        if ( swApiPeopleResponse == null ) {
+//            return null;
+//        }
+//
+//        GetAllPeopleResponse response = new GetAllPeopleResponse();
+//
+//        response.setCount( swApiPeopleResponse.getCount() );
+//        response.setNext( swApiPeopleResponse.getNext() );
+//        response.setPrevious( swApiPeopleResponse.getPrevious() );
+//
+//        List<PersonResponse> personResponseList = new ArrayList<>();
+//        for(Result res: swApiPeopleResponse.getResults()) {
+//            PersonResponse personResponse = new PersonResponse();
+//            personResponse.setName(res.getName());
+//            personResponse.setGender(res.getGender());
+//            personResponse.setBirthYear(res.getBirthYear());
+//            personResponse.setHeight(res.getHeight());
+//            personResponse.setHomeworld(res.getHomeworld());
+//            personResponse.setMass(res.getMass());
+//            personResponseList.add(personResponse);
+//        }
+//        response.setResults(personResponseList);
+//
+//
+//        return response;
+//    }
+//}

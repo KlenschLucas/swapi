@@ -1,0 +1,54 @@
+<!--Heading-->
+<nav class="text-center">
+  <h1 class="display-2">SWAPI</h1>
+  <h1 class="display-6"><small>The Star Wars API</small></h1>
+</nav>
+
+
+<div *ngIf="viewPersonDetails === null && peopleResponse !== null">
+  <div class="row" style="margin-bottom: 1rem;justify-items: center">
+    <!--    Search Box  -->
+    <mdb-form-control class="col-6 offset-3">
+      <input mdbInput type="text" id="typeText" class="form-control" (input)="onSearch($event)"/>
+      <label mdbLabel class="form-label" for="typeText">Search</label>
+    </mdb-form-control>
+    <p class="text-center lead">Results: {{peopleResponse.count}}
+    </p>
+  </div>
+
+  <div *ngIf="!loading">
+    <!--  List of People -->
+    <app-person-card
+      [people]="peopleResponse.results" (viewPersonDetails)="viewDetails($event)">
+    </app-person-card>
+
+    <!--  Pagination (something like that) -->
+    <app-pagination
+      class="center"
+      [currentPage]="currentPage"
+      [hasNextPage]="peopleResponse.next !== null"
+      [hasPreviousPage]="peopleResponse.previous !== null"
+      (pageChanged)="changePage($event)"
+    ></app-pagination>
+  </div>
+</div>
+
+<div class="center" *ngIf="loading">
+  <!--Loading indicator-->
+  <div class="spinner-border" style="width:3rem; height: 3rem;" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<div *ngIf="viewPersonDetails !== null">
+
+  <!--Details of Person-->
+  <app-person-detail
+    [person]="viewPersonDetails">
+  </app-person-detail>
+
+  <button role="button" class="btn btn-primary offset-4" (click)="viewHome()" style="margin-top:1rem ">
+    <i class="fas fa-angle-double-left"></i>
+    Back to Home Page
+  </button>
+</div>
