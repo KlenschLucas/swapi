@@ -131,7 +131,7 @@
                             <outputDirectory>${build.directory}/classes/static/</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>../client/dist/swapi-client</directory>
+                                    <directory>client/dist/swapi-client</directory>
                                 </resource>
                             </resources>
                         </configuration>
