@@ -3,7 +3,6 @@ package com.example.SWAPI.controller;
 import com.example.SWAPI.service.SwApiService;
 import feign.FeignException;
 import feign.Request;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
