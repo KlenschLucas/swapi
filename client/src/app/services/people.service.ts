@@ -8,7 +8,7 @@ import {PeopleResponse} from "../models/PeopleResponse";
 })
 export class PeopleService {
   // URL to api
-  private url = 'http://localhost:8080/people/';
+  private url = 'https://swapi-production-ec5a.up.railway.app/people/';
 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
