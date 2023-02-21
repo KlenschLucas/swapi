@@ -1,0 +1,10 @@
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/persistence/dto/Result.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/service/SwApiService.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/config/WebConfig.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/config/SwaggerConfig.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/persistence/dto/GetAllPeopleResponse.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/controller/PeopleController.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/persistence/dto/SwApiPeopleResponse.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/persistence/dto/PersonResponse.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/mapper/GetAllPeopleResponseMapper.java
+/home/klensch/projects/newnew/swapi/src/main/java/com/example/SWAPI/SwapiApplication.java
